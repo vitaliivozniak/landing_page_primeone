@@ -61,6 +61,8 @@ $mw4:479.98;
 	display: flex;
 	background-color: #000;
 	margin: 0 0 75px 0;
+	position: relative;
+	z-index: 5;
 }
 .private__column{
 	flex: 0 0 50%;

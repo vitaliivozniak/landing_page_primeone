@@ -105,11 +105,21 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media (max-width: 752px) {
+    .header-top {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 5; } }
 
 .header-top-lang {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media (max-width: 752px) {
+    .header-top-lang {
+      display: none; } }
 
 .header-top-lang__item {
   display: block;
@@ -146,36 +156,46 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: -12px 0 0 0; }
+  margin: -12px 0 0 0;
+  /*@media (max-width: $mw3+px){
+		display: flex;
+		flex-direction:column;
+
+	}*/ }
   @media (max-width: 752px) {
     .header-bottom {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .header-bottom__column {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 33.333%;
-  flex: 0 0 33.333%; }
+  flex: 0 0 33.333%;
+  /*&--left{
+		@media (max-width: $mw3+px){
+			order: 2;
+		}
+	}
+	&--center{
+		@media (max-width: $mw3+px){
+			order: 1;
+		}
+	}
+	&--right{
+		@media (max-width: $mw3+px){
+			order: 3;
+		}
+	}*/ }
   @media (max-width: 752px) {
     .header-bottom__column--left {
-      -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-      order: 2; } }
-  @media (max-width: 752px) {
-    .header-bottom__column--center {
-      -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-      order: 1; } }
+      display: none; } }
   @media (max-width: 752px) {
     .header-bottom__column--right {
-      -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-      order: 3; } }
+      display: none; } }
 
 .header-bottom-menu--right {
   display: -webkit-box;
@@ -229,7 +249,9 @@ header {
   text-align: center; }
   @media (max-width: 752px) {
     .header-logo {
-      margin: 0px 0 15px 0; } }
+      margin: 0px 0 15px 0;
+      position: relative;
+      z-index: 5; } }
 
 .header-logo__text {
   display: block;
@@ -260,23 +282,59 @@ header {
         width: 115px; } }
 
 .header-bottom__menu {
-  border: 1px solid blue; }
-
-.header-bottom-menu-item {
   display: none; }
   @media (max-width: 752px) {
-    .header-bottom-menu-item {
-      display: inline;
-      position: fixed;
-      top: 50px;
-      border: 1px solid red; }
-      .header-bottom-menu-item :hover {
-        border: 1px solid #000;
-        position: relative;
-        left: 50px; } }
+    .header-bottom__menu {
+      background-color: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      position: absolute;
+      z-index: 4;
+      top: 0px;
+      right: 89%;
+      width: 100%; }
+      .header-bottom__menu:hover {
+        position: absolute;
+        z-index: 6;
+        left: 0%; } }
+  @media (max-width: 479.98px) {
+    .header-bottom__menu {
+      right: 85%; } }
+
+@media (max-width: 752px) {
+  .header-bottom__menu__burger {
+    background: url("../img/icone/burger-menu.svg") 0 0/100% 100% no-repeat;
+    width: 30px;
+    height: 18px;
+    display: block;
+    cursor: pointer;
+    margin: 0px 15px 20px 0px;
+    -ms-flex-item-align: end;
+    align-self: flex-end; } }
+
+.header-bottom-menu-item {
+  display: block;
+  padding: 0 0 0 15px; }
+
+.header-top-lang2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 15px 0; }
 
 .header-bottom__menu__link {
-  display: block; }
+  display: block;
+  font-family: 'AkzidenzGroteskBQBoldCondensed';
+  color: #000;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 15px 0; }
 
 .footer-body {
   display: -webkit-box;
@@ -306,7 +364,9 @@ header {
   display: -ms-flexbox;
   display: flex;
   background-color: #000;
-  margin: 0 0 75px 0; }
+  margin: 0 0 75px 0;
+  position: relative;
+  z-index: 5; }
 
 .private__column {
   -webkit-box-flex: 0;
