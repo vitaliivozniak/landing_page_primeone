@@ -45,7 +45,7 @@ $mw4:479.98;
 
 
 .container{max-width:$mw+px;margin: 0 auto;width: 100%; 
-	//@media (max-width: $mw1+px){max-width:970px;}
+	//@media (max-width: $mw2+px){max-width:970px;}
 	@media (max-width: $mw1+px){max-width:750px;}
 	@media (max-width: $mw3+px){max-width:none; padding: 0 10px;}
 }
@@ -66,6 +66,13 @@ $mw4:479.98;
 }
 .private__column{
 	flex: 0 0 50%;
+	@media (max-width: $mw3+px){
+		flex: 1 1 100%;
+		&:first-child{
+			display: none;
+		}
+		
+	}
 }
 
 .private__image {
@@ -76,10 +83,16 @@ $mw4:479.98;
 .private-body {
 	padding: 75px 0 65px 60px;
 	color: #ffffff;
+	@media (max-width: $mw1+px){
+		padding: 30px 30px 30px 30px;	
+	}
 }
 
 .private-body__content{
 	max-width: 305px;
+	@media (max-width: $mw1+px){
+		//max-width: 100%;	
+	}
 }
 
 
@@ -89,11 +102,19 @@ $mw4:479.98;
 	font-family: 'AkzidenzGroteskBQBoldCondensed';
 	letter-spacing: 5px;
 	margin: 0 0 30px 0;
+	@media (max-width: $mw1+px){
+		font-size: 35px;
+		margin: 0 0 20px 0;
+	}
 }
 .private-body__text {
 	font-size: 15px;
 	line-height: 25px;
 	margin: 0 0 50px 0;
+	@media (max-width: $mw1+px){
+		font-size: 13px;
+		margin: 0 0 30px 0;
+	}
 }
 .private-body-buttons {
 	display: flex;
@@ -107,6 +128,9 @@ $mw4:479.98;
 	margin: 0 0 0 15px;
 	color: #ffffff;
 	letter-spacing: 1.5px;
+	@media (max-width: $mw1+px){
+		font-size: 13px;
+	}
 }
 
 //==========================================

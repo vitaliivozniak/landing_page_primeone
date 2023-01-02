@@ -11,8 +11,6 @@ header{
 	justify-content: space-between;
 	@media (max-width: $mw3+px){
 		justify-content:flex-end;
-		position: relative;
-		z-index: 5;
 	}
 }
 .header-top-lang {
@@ -46,11 +44,12 @@ header{
 	text-decoration: underline;
 	font-size: 15px;
 	color: #000;
-	@media (max-width: $mw4+px){
-		font-size: 13px;
-	}
 	@media (max-width: $mw3+px){
-		margin: 20px 0 0 0;
+		margin: 22px 0 0 0;
+	}
+	@media (max-width: $mw4+px){
+		font-size: 12px;
+		margin: 19px 0 0 0px;
 	}
 }
 
@@ -141,11 +140,14 @@ header{
 	display: block;
 	text-align: center;
 	@media (max-width: $mw3+px){
-		margin:0px 0 15px 0;
+		margin:0px 0px 0px 0;
 		position: relative;
 		z-index: 7;
 	}
-
+	@media (max-width: $mw4+px){
+		letter-spacing: 5px;
+		margin:0px 10px 0px 0;
+	}
 }
 
 .header-logo__text {
@@ -181,30 +183,33 @@ header{
 .header-bottom__menu {
 	display: none;
 	@media (max-width: $mw3+px){
+		background: url('../img/icone/burger-menu.svg') right 0 no-repeat;
 		overflow: auto;
-		padding: 5px 0px 0px 0;
-		background-color: #fff;
 		display:flex;
 		flex-direction:column;
 		position: absolute;
 		z-index: 4;
-		top: 0;
-		right: 89%;
+		top: 17px;
+		right: 92%;
 		//border: 1px solid blue;
 		width: 100%;
 		&:hover{
-			position: fixed;
+			position: absolute;
 			z-index: 6;
 			left: 0;
+			background: url('../img/icone/cross.svg')  15px 0 no-repeat;
+			background-color: #fff;
 		}
 	}
 	@media (max-width: $mw4+px){
-		right: 85%;
+		right: 88%;
+		top: 10px;
+
 	}
 }
-.header-bottom__menu__burger{
+/*.header-bottom__menu__burger{
 	@media (max-width: $mw3+px){
-		background: url('../img/icone/burger-menu.svg') 0 0/100% 100% no-repeat;
+		//background: url('../img/icone/burger-menu.svg') 0 0/100% 100% no-repeat;
 		width: 30px;
 		height: 30px;
 		//border: 1px solid blue;
@@ -213,10 +218,13 @@ header{
 		margin: 12px 15px 20px 0px;
 		align-self:flex-end;
 	}
-}
+}*/
 .header-bottom-menu-item{
 	display: block;
-	padding: 0 0 0 15px;
+	padding: 80px 0 0 15px;
+	@media (max-width: $mw4+px){
+		padding: 60px 0 0 15px;
+	}
 }
 
 .header-top-lang2{
