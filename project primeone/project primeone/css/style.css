@@ -382,6 +382,9 @@ header {
   margin: 0 0 75px 0;
   position: relative;
   z-index: 5; }
+  @media (max-width: 752px) {
+    .private {
+      margin: 0 0 40px 0; } }
 
 .private__column {
   -webkit-box-flex: 0;
@@ -408,6 +411,9 @@ header {
 
 .private-body__content {
   max-width: 305px; }
+  @media (max-width: 752px) {
+    .private-body__content {
+      max-width: none; } }
 
 .private-body__title {
   font-size: 50px;
@@ -451,17 +457,34 @@ header {
 
 .products {
   margin: 0 0 40px 0; }
+  @media (max-width: 752px) {
+    .products {
+      margin: 0 0 0px 0; } }
 
 .products-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media (max-width: 752px) {
+    .products-body {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
 
 .products__column {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   margin: 0 0 40px 0; }
+  @media (max-width: 752px) {
+    .products__column {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%; } }
+  @media (max-width: 380px) {
+    .products__column {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+      flex: 1 1 100%; } }
 
 .products-item {
   display: -webkit-box;
@@ -486,6 +509,9 @@ header {
     background: url("../img/products/03.png") 0 0/100% 100% no-repeat; }
   .products-item__image-4 {
     background: url("../img/products/04.png") 0 0/100% 100% no-repeat; }
+  @media (max-width: 380px) {
+    .products-item__image {
+      margin: 0 0 15px 0; } }
 
 .products-item__title {
   display: block;
@@ -497,6 +523,12 @@ header {
   font-family: 'AkzidenzGroteskBQBoldCondensed';
   letter-spacing: 2.5px;
   margin: 0 0 30px 0; }
+  @media (max-width: 380px) {
+    .products-item__title {
+      max-width: none;
+      height: auto;
+      overflow: visible;
+      margin: 0 0 20px 0; } }
 
 .products-item__text {
   -webkit-box-flex: 1;
@@ -507,6 +539,10 @@ header {
   max-width: 185px;
   line-height: 25px;
   margin: 0 0 25px 0; }
+  @media (max-width: 380px) {
+    .products-item__text {
+      max-width: none;
+      margin: 0 0 15px 0; } }
 
 .products__btn {
   margin: 0 0 29px 0; }
@@ -529,6 +565,13 @@ header {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%; }
+  @media (max-width: 892px) {
+    .why-top__column {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+      flex: 1 1 100%; }
+      .why-top__column:last-child {
+        display: none; } }
 
 .why-top__text {
   font-size: 50px;
@@ -538,6 +581,16 @@ header {
   letter-spacing: 5px;
   color: white;
   padding: 55px 60px 45px 0px; }
+  @media (max-width: 892px) {
+    .why-top__text {
+      text-align: center;
+      padding: 35px 45px 25px 45px; } }
+  @media (max-width: 752px) {
+    .why-top__text {
+      font-size: 35px; } }
+  @media (max-width: 479.98px) {
+    .why-top__text {
+      font-size: 25px; } }
 
 .why-top__image {
   background: url("../img/why/01.png") 0 0/100% 100% no-repeat;
@@ -546,6 +599,9 @@ header {
 .why-body {
   background-color: #DCDCDC;
   padding: 50px 0px 0px 0px; }
+  @media (max-width: 479.98px) {
+    .why-body {
+      padding: 30px 0px 0px 0px; } }
 
 .container-why {
   display: -webkit-box;
@@ -561,6 +617,16 @@ header {
   margin: 0 0 50px 0; }
   .why-body__column:nth-child(even) {
     padding: 0 0 0 5px; }
+  @media (max-width: 892px) {
+    .why-body__column {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+      flex: 1 1 100%; }
+      .why-body__column:nth-child(even) {
+        padding: 0; } }
+  @media (max-width: 479.98px) {
+    .why-body__column {
+      margin: 0 0 30px 0; } }
 
 .why-body-item {
   display: -webkit-box;
@@ -580,6 +646,12 @@ header {
     background: url("../img/why/icons/03.png") 0 0/100% 100% no-repeat; }
   .why-body-item__icon-4 {
     background: url("../img/why/icons/04.png") 0 0/100% 100% no-repeat; }
+  @media (max-width: 479.98px) {
+    .why-body-item__icon {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+      flex: 0 0 80px;
+      height: 80px; } }
 
 .why-body-item-body {
   -webkit-box-flex: 1;
@@ -602,6 +674,9 @@ header {
   text-transform: uppercase;
   font-family: 'AkzidenzGroteskBQBoldCondensed';
   letter-spacing: 2.5px; }
+  @media (max-width: 479.98px) {
+    .why-body-item-body__title {
+      font-size: 20px; } }
 
 .why-body-item-body__text {
   font-size: 15px;
